@@ -127,6 +127,64 @@ img {
   isolation: isolate;
 }
 
+/* Two-column hero layout (text + media) */
+.hero-grid{
+  position: relative;
+  z-index: 3;                     /* above mountains */
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: clamp(16px, 3vw, 28px);
+}
+.hero-copy { min-width: 0; }      /* prevent overflow on small widths */
+
+/* On small screens, stack (media below text) */
+@media (max-width: 900px){
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-media { justify-self: start; }
+}
+
+/* Media card */
+.hero-media{
+  position: relative;
+  justify-self: end;
+}
+
+.hero-photo{
+  width: min(360px, 32vw);
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+
+  /* “card” feel, with larger bottom-right corner */
+  border-radius: 18px 18px 40px 18px;
+  border: 2px solid #2a2a2a;
+  box-shadow: 0 10px 30px rgba(0,0,0,.45);
+  background: #111;               /* fallback if image not loaded */
+}
+
+/* Dragon logo overlay (sits a bit outside the photo) */
+.hero-logo{
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: clamp(54px, 7vw, 72px);
+  height: auto;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.35));
+  transform: rotate(-5deg);       /* tiny playful tilt; remove if you prefer flat */
+}
+
+/* If you want an orange badge behind the logo (like a chip), uncomment:
+.hero-logo::before{
+  content:"";
+  position:absolute; inset:-8px;
+  background: var(--accent);
+  border-radius: 14px;
+  z-index:-1;
+  box-shadow: 0 10px 22px rgba(245,137,29,.30);
+}
+*/
+
 @supports (height: 100svh) {
   .hero {
     min-height: calc(100svh - var(--header-h));
@@ -335,6 +393,92 @@ img {
     opacity: 1 !important;
   }
 }
+
+/* ===== WORK (grouped) ===== */
+.work { padding-top: clamp(2rem, 4vw, 3rem); }
+
+.work-group{
+  position: relative;
+  padding: clamp(28px, 6vw, 52px) 0;
+}
+
+.work-grid{
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 7fr 5fr;          /* gallery / copy */
+  gap: clamp(14px, 2.5vw, 22px);
+  align-items: center;
+}
+
+/* alternate layout every other group */
+.work-group:nth-of-type(even) .work-grid{
+  grid-template-columns: 5fr 7fr;
+}
+.work-group:nth-of-type(even) .work-gallery{ order: 2; }
+.work-group:nth-of-type(even) .work-copy{ order: 1; }
+
+@media (max-width: 900px){
+  .work-grid{ grid-template-columns: 1fr; }
+  .work-gallery{ order: 1 !important; }
+  .work-copy{ order: 2 !important; }
+}
+
+/* curved separators (thin arcs) */
+.work-swoop{
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  display: grid; place-items: center;
+}
+.work-swoop svg{ width: 100%; height: 220px; }
+.work-swoop .arc{ fill: none; stroke: rgba(255,255,255,.06); stroke-width: 2; }
+
+/* side orange dots */
+.work-dot{
+  position: absolute; right: -12px; top: 50%; transform: translateY(-50%);
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 2px 10px rgba(245,137,29,.35);
+}
+.work-dot--right{ right: auto; left: -12px; }
+
+/* gallery */
+.work-gallery{ display: grid; gap: 10px; }
+.work-hero{
+  width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+  border-radius: 16px; border: 1px solid #3a3a3a;
+  box-shadow: 0 12px 26px rgba(0,0,0,.35);
+}
+.work-grid-minis{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+}
+.work-grid-minis img{
+  width: 100%; aspect-ratio: 1.35 / 1; object-fit: cover;
+  border-radius: 12px; border: 1px solid #2f2f2f;
+}
+
+/* copy card */
+.work-copy{
+  background: #1a1a1a; color: #e9e9e9;
+  border: 1px solid #2b2b2b; border-radius: 14px;
+  padding: clamp(14px, 2.5vw, 18px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.25);
+}
+.work-h{
+  margin: 0 0 8px; font-size: clamp(1.1rem, 3vw, 1.25rem);
+  color: var(--text);
+}
+.work-p{ margin: 0 0 12px; color: #d1d1d1; }
+
+.work-tags{
+  display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0 0 12px;
+}
+.work-tags li{
+  border: 1px solid #3a3a3a; color: #e5e5e5;
+  padding: .3rem .6rem; border-radius: 999px; font-size: .85rem;
+}
+
+/* CTA inside copy */
+.work-cta{ margin-top: 4px; }
+
 
 /* --------- Buttons --------- */
 .btn {
@@ -559,6 +703,23 @@ img {
   .col-4 {
     grid-column: span 4;
   }
+}
+
+/* default: stack on mobile */
+.col-6, .col-3 { grid-column: span 12; }
+
+/* desktop: 6/3/3 in one row */
+@media (min-width: 900px){
+  .col-6 { grid-column: span 6; }
+  .col-3 { grid-column: span 3; }
+
+  /* in case you previously set .about-card--skills full width, override it */
+  .about-card--skills { grid-column: span 6 !important; }
+}
+
+/* small size tweak so badges fit nicely in half-width */
+.about-card--skills .tool-badges li{
+  width: 32px; height: 32px; font-size: .8rem;
 }
 
 /* card style */
