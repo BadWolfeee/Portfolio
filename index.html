@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#hero" aria-label="Homepage">
@@ -44,327 +43,432 @@
       <!-- HERO -->
       <section id="hero" class="hero">
         <div class="container hero-inner">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <h1 class="hero-title reveal-down">
-        HELLO THERE,<br />I’M JAN VLČEK
-      </h1>
-      <p class="hero-description reveal-down" style="--delay:120ms">
-        multi-disciplinary designer & illustrator based in Valašské Meziříčí, Czechia.
-      </p>
-      <div class="hero-actions reveal-down" style="--delay:220ms">
-        <a href="#contact" class="btn btn-cta-outline">Let’s create something together →</a>
-      </div>
-    </div>
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <h1 class="hero-title reveal-down">
+                HELLO THERE,<br />I’M JAN VLČEK
+              </h1>
+              <p class="hero-description reveal-down" style="--delay: 120ms">
+                multi-disciplinary designer & illustrator based in Valašské
+                Meziříčí, Czechia.
+              </p>
+              <div class="hero-actions reveal-down" style="--delay: 220ms">
+                <a href="#contact" class="btn btn-cta-outline"
+                  >Let’s create something together →</a
+                >
+              </div>
+            </div>
 
-    <!-- NEW: media card with placeholder photo + logo overlay -->
-    <figure class="hero-media reveal-down" style="--delay:140ms">
-      <img
-        class="hero-photo"
-        src="res\concept.svg"
-        alt="Portrait of Jan Vlček"
-      />
-      <!-- overlay logo (uses your logo.png) -->
-      <img class="hero-logo" src="res\logo.svg" alt="" aria-hidden="true" />
-    </figure>
-  </div>
-</div>
+            <!-- NEW: media card with placeholder photo + logo overlay -->
+            <figure class="hero-media reveal-down" style="--delay: 140ms">
+              <img
+                class="hero-photo"
+                src="res\me.jpg"
+                alt="Portrait of Jan Vlček"
+              />
+              <!-- overlay logo (uses your logo.png) -->
+              <img
+                class="hero-logo"
+                src="res\logo.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </figure>
+          </div>
+        </div>
         <!-- inside #hero, after your CTA -->
-<button class="scroll-cue" aria-label="Scroll to content"
-  onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">
-  <span>Scroll</span>
-  <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M12 5v14m0 0l-6-6m6 6l6-6" fill="none" stroke="currentColor" stroke-width="2"
-      stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
-
+        <button
+          class="scroll-cue"
+          aria-label="Scroll to content"
+          onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})"
+        >
+          <span>Scroll</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 5v14m0 0l-6-6m6 6l6-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
 
         <!-- Animated scene -->
-  <div class="sun-fixed" id="sunFixed" aria-hidden="true"></div>
+        <div class="sun-fixed" id="sunFixed" aria-hidden="true"></div>
 
         <svg
-  class="mountains"
-  viewBox="0 0 1440 420"
-  preserveAspectRatio="none"
-  aria-hidden="true"
->
+          class="mountains"
+          viewBox="0 0 1440 420"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <!-- LEFT set -->
+          <g class="set set--left">
+            <g class="layer layer--far"><polygon points="" /></g>
+            <g class="layer layer--mid"><polygon points="" /></g>
+            <g class="layer layer--near"><polygon points="" /></g>
+          </g>
 
-  <!-- LEFT set -->
-  <g class="set set--left">
-    <g class="layer layer--far"><polygon points="" /></g>
-    <g class="layer layer--mid"><polygon points="" /></g>
-    <g class="layer layer--near"><polygon points="" /></g>
-  </g>
-
-  <!-- RIGHT set (we’ll mirror these via JS) -->
-  <g class="set set--right">
-    <g class="layer layer--far"><polygon points="" /></g>
-    <g class="layer layer--mid"><polygon points="" /></g>
-    <g class="layer layer--near"><polygon points="" /></g>
-  </g>
-</svg>
-
+          <!-- RIGHT set (we’ll mirror these via JS) -->
+          <g class="set set--right">
+            <g class="layer layer--far"><polygon points="" /></g>
+            <g class="layer layer--mid"><polygon points="" /></g>
+            <g class="layer layer--near"><polygon points="" /></g>
+          </g>
+        </svg>
       </section>
 
       <!-- WORK -->
-<section id="work" class="section work">
-  <div class="container">
-    <h2 class="section-title">Selected work</h2>
-  </div>
-
-  <!-- Brand Design -->
-  <div class="work-group">
-    <div class="work-swoop" aria-hidden="true">
-      <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
-        <path d="M40 110 Q600 0 1160 110" class="arc"></path>
-        <path d="M80 150 Q600 40 1120 150" class="arc"></path>
-      </svg>
-    </div>
-
-    <div class="container work-grid">
-      <div class="work-gallery">
-        <img class="work-hero" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1400&auto=format&fit=crop" alt="Brand mockups: cards and packaging" />
-        <div class="work-grid-minis">
-          <img src="https://images.unsplash.com/photo-1520975922203-b7f4e29d3cbd?q=80&w=800&auto=format&fit=crop" alt="T-shirt mockup" />
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop" alt="Pattern tile" />
-          <img src="https://images.unsplash.com/photo-1512446733611-9099a758e63e?q=80&w=800&auto=format&fit=crop" alt="Color chips" />
+      <section id="work" class="section work">
+        <div class="container">
+          <h2 class="section-title">Selected work</h2>
         </div>
-      </div>
 
-      <article class="work-copy">
-        <h3 class="work-h">Brand Design</h3>
-        <p class="work-p">
-          End-to-end identity systems—mark, type, palette, pattern kit—and rollout across merch & web.
-        </p>
-        <ul class="work-tags">
-          <li>Logo</li><li>Guidelines</li><li>Packaging</li><li>Web hero</li>
-        </ul>
-        <a href="#" class="btn btn-cta-outline work-cta">View case study →</a>
-      </article>
-    </div>
+        <!-- Brand Design -->
+        <div class="work-group">
+          <div class="work-swoop" aria-hidden="true">
+            <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
+              <path d="M40 110 Q600 0 1160 110" class="arc"></path>
+              <path d="M80 150 Q600 40 1120 150" class="arc"></path>
+            </svg>
+          </div>
 
-    <div class="work-dot" aria-hidden="true"></div>
-  </div>
-
-  <!-- Concept Design -->
-  <div class="work-group">
-    <div class="work-swoop" aria-hidden="true">
-      <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
-        <path d="M40 110 Q600 0 1160 110" class="arc"></path>
-        <path d="M80 150 Q600 40 1120 150" class="arc"></path>
-      </svg>
-    </div>
-
-    <div class="container work-grid">
-      <article class="work-copy">
-        <h3 class="work-h">Concept Design</h3>
-        <p class="work-p">
-          Fast explorations: moodboards, silhouettes, iteration boards, and presentable keyframes.
-        </p>
-        <ul class="work-tags">
-          <li>Key art</li><li>Style frames</li><li>Exploration</li>
-        </ul>
-        <a href="#" class="btn btn-cta-outline work-cta">See concepts →</a>
-      </article>
-
-      <div class="work-gallery">
-        <img class="work-hero" src="https://images.unsplash.com/photo-1548095115-45697e51361e?q=80&w=1400&auto=format&fit=crop" alt="Concept art collage" />
-        <div class="work-grid-minis">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop" alt="Lighting test" />
-          <img src="https://images.unsplash.com/photo-1520975693419-6349f92ad2b8?q=80&w=800&auto=format&fit=crop" alt="Color variation" />
-          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=800&auto=format&fit=crop" alt="Props sheet" />
-        </div>
-      </div>
-    </div>
-
-    <div class="work-dot work-dot--right" aria-hidden="true"></div>
-  </div>
-
-  <!-- Game Environment & UI -->
-  <div class="work-group">
-    <div class="work-swoop" aria-hidden="true">
-      <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
-        <path d="M40 110 Q600 0 1160 110" class="arc"></path>
-        <path d="M80 150 Q600 40 1120 150" class="arc"></path>
-      </svg>
-    </div>
-
-    <div class="container work-grid">
-      <div class="work-gallery">
-        <img class="work-hero" src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1400&auto=format&fit=crop" alt="In-game environment with UI overlay" />
-        <div class="work-grid-minis">
-          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop" alt="HUD sketch" />
-          <img src="https://images.unsplash.com/photo-1606117331085-5760e3b58520?q=80&w=800&auto=format&fit=crop" alt="UI dialog mock" />
-          <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=800&auto=format&fit=crop" alt="Environment paintover" />
-        </div>
-      </div>
-
-      <article class="work-copy">
-        <h3 class="work-h">Game Environment & UI</h3>
-        <p class="work-p">
-          Level mood + UI components built together for clarity and style—menus, HUD, dialogs, micro-interactions.
-        </p>
-        <ul class="work-tags">
-          <li>HUD</li><li>Menues</li><li>Dialog</li><li>Motion</li>
-        </ul>
-        <a href="#" class="btn btn-cta-outline work-cta">Play the demo →</a>
-      </article>
-    </div>
-
-    <div class="work-dot" aria-hidden="true"></div>
-  </div>
-
-  <!-- Product Design -->
-  <div class="work-group">
-    <div class="work-swoop" aria-hidden="true">
-      <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
-        <path d="M40 110 Q600 0 1160 110" class="arc"></path>
-        <path d="M80 150 Q600 40 1120 150" class="arc"></path>
-      </svg>
-    </div>
-
-    <div class="container work-grid">
-      <article class="work-copy">
-        <h3 class="work-h">Product Design</h3>
-        <p class="work-p">
-          From wireframes to shipped UI with dev-ready specs—design systems, tokens, responsive flows.
-        </p>
-        <ul class="work-tags">
-          <li>Wireframes</li><li>Design System</li><li>Handoff</li>
-        </ul>
-        <a href="#" class="btn btn-cta-outline work-cta">See product work →</a>
-      </article>
-
-      <div class="work-gallery">
-        <img class="work-hero" src="https://images.unsplash.com/photo-1551281044-8eb3408e3e58?q=80&w=1400&auto=format&fit=crop" alt="Dashboard product UI" />
-        <div class="work-grid-minis">
-          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop" alt="Token sheet" />
-          <img src="https://images.unsplash.com/photo-1555421689-43cad7100751?q=80&w=800&auto=format&fit=crop" alt="Components library" />
-          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800&auto=format&fit=crop" alt="Mobile screen" />
-        </div>
-      </div>
-    </div>
-
-    <div class="work-dot work-dot--right" aria-hidden="true"></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section about">
-  <div class="container">
-    <div class="about-wrap">
-      <h2 class="about-title">ABOUT ME</h2>
-
-      <div class="about-grid">
-        <!-- Experience (8 cols) -->
-        <article class="about-card col-8">
-          <h3 class="about-h">Experience</h3>
-          <ul class="about-list">
-            <li>
-              <strong>2022 – 2025</strong> Freelance Graphic Design & Illustration
-            </li>
-            <li>
-              <strong>2020 – 2022</strong> Interior Design
-            </li>
-            <li>
-              <strong>2020 – 2022</strong> Interiors & Graphic Design Intern
-              <span class="muted">· 3D design & rendering; graphic design; prepress</span>
-            </li>
-          </ul>
-        </article>
-
-        <!-- Mascot / photo tile (4 cols) -->
-        <aside class="about-card col-4 about-mascot">
-          <img src="res\logo.svg" alt="" aria-hidden="true" />
-        </aside>
-
-        <!-- Language (4 cols) -->
-        <article class="about-card col-4">
-          <h3 class="about-h">Language</h3>
-          <ul class="about-list">
-            <li><strong>Czech</strong> native</li>
-            <li><strong>English</strong> fluent</li>
-            <li><strong>Vietnamese</strong> basic / learning</li>
-          </ul>
-        </article>
-
-        <!-- Education (8 cols) -->
-        <article class="about-card col-8">
-          <h3 class="about-h">Education</h3>
-          <ul class="about-list">
-            <li><strong>2025</strong> UX/UI Design (ISTEP)</li>
-            <li><strong>2017 – 2020</strong> University of Jan Evangelista Purkyně (UJEP) — Product design</li>
-            <li><strong>2012 – 2016</strong> Secondary school of applied arts, Uherské Hradiště — Industrial design</li>
-          </ul>
-        </article>
-
-        <!-- Technical skills (8 cols) -->
-        <article class="about-card col-6 about-card--skills">
-          <h3 class="about-h about-h--accent">Technical skills</h3>
-          <div class="skills">
-            <div>
-              <div class="subhead">Software tools</div>
-              <ul class="tool-badges">
-                <li title="Photoshop">Ps</li>
-                <li title="Illustrator">Ai</li>
-                <li title="Figma">Fig</li>
-                <li title="After Effects">Ae</li>
-                <li title="Premiere">Pr</li>
-                <li title="Blender">Bl</li>
-              </ul>
+          <div class="container work-grid">
+            <div class="work-gallery">
+              <img
+                class="work-hero"
+                src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1400&auto=format&fit=crop"
+                alt="Brand mockups: cards and packaging"
+              />
+              <div class="work-grid-minis">
+                <img
+                  src="https://images.unsplash.com/photo-1520975922203-b7f4e29d3cbd?q=80&w=800&auto=format&fit=crop"
+                  alt="T-shirt mockup"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800&auto=format&fit=crop"
+                  alt="Pattern tile"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1512446733611-9099a758e63e?q=80&w=800&auto=format&fit=crop"
+                  alt="Color chips"
+                />
+              </div>
             </div>
-            <div>
-              <div class="subhead">Web development</div>
-              <ul class="about-bullets">
-                <li>Basic+ HTML/CSS</li>
-                <li>CSS</li>
-                <li>JavaScript (basics)</li>
+
+            <article class="work-copy">
+              <h3 class="work-h">Brand Design</h3>
+              <p class="work-p">
+                End-to-end identity systems—mark, type, palette, pattern kit—and
+                rollout across merch & web.
+              </p>
+              <ul class="work-tags">
+                <li>Logo</li>
+                <li>Guidelines</li>
+                <li>Packaging</li>
+                <li>Web hero</li>
               </ul>
+              <a href="#" class="btn btn-cta-outline work-cta"
+                >View case study →</a
+              >
+            </article>
+          </div>
+
+          <div class="work-dot" aria-hidden="true"></div>
+        </div>
+
+        <!-- Concept Design -->
+        <div class="work-group">
+          <div class="work-swoop" aria-hidden="true">
+            <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
+              <path d="M40 110 Q600 0 1160 110" class="arc"></path>
+              <path d="M80 150 Q600 40 1120 150" class="arc"></path>
+            </svg>
+          </div>
+
+          <div class="container work-grid">
+            <article class="work-copy">
+              <h3 class="work-h">Concept Design</h3>
+              <p class="work-p">
+                Fast explorations: moodboards, silhouettes, iteration boards,
+                and presentable keyframes.
+              </p>
+              <ul class="work-tags">
+                <li>Key art</li>
+                <li>Style frames</li>
+                <li>Exploration</li>
+              </ul>
+              <a href="#" class="btn btn-cta-outline work-cta"
+                >See concepts →</a
+              >
+            </article>
+
+            <div class="work-gallery">
+              <img
+                class="work-hero"
+                src="https://images.unsplash.com/photo-1548095115-45697e51361e?q=80&w=1400&auto=format&fit=crop"
+                alt="Concept art collage"
+              />
+              <div class="work-grid-minis">
+                <img
+                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop"
+                  alt="Lighting test"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1520975693419-6349f92ad2b8?q=80&w=800&auto=format&fit=crop"
+                  alt="Color variation"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=800&auto=format&fit=crop"
+                  alt="Props sheet"
+                />
+              </div>
             </div>
           </div>
-        </article>
 
-        <!-- Hobbies (4 cols) -->
-        <article class="about-card col-3">
-          <h3 class="about-h">Hobbies</h3>
-          <ul class="about-bullets">
-            <li>Digital art</li>
-            <li>Cooking</li>
-            <li>Singing</li>
-            <li>PC & board games</li>
-          </ul>
-        </article>
+          <div class="work-dot work-dot--right" aria-hidden="true"></div>
+        </div>
 
-        <!-- Traits (4 cols) -->
-        <article class="about-card col-3">
-          <h3 class="about-h">Traits</h3>
-          <ul class="about-bullets">
-            <li>Friendly</li>
-            <li>Team player</li>
-            <li>Detail-oriented</li>
-            <li>Creative</li>
-            <li>Technical</li>
-          </ul>
-        </article>
-      </div>
+        <!-- Game Environment & UI -->
+        <div class="work-group">
+          <div class="work-swoop" aria-hidden="true">
+            <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
+              <path d="M40 110 Q600 0 1160 110" class="arc"></path>
+              <path d="M80 150 Q600 40 1120 150" class="arc"></path>
+            </svg>
+          </div>
 
-      <!-- optional tiny links row -->
-      <div class="about-links">
-        <a href="mailto:jan@example.com">MAIL</a>
-        <span>·</span>
-        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LINKEDIN</a>
-      </div>
+          <div class="container work-grid">
+            <div class="work-gallery">
+              <img
+                class="work-hero"
+                src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1400&auto=format&fit=crop"
+                alt="In-game environment with UI overlay"
+              />
+              <div class="work-grid-minis">
+                <img
+                  src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop"
+                  alt="HUD sketch"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1606117331085-5760e3b58520?q=80&w=800&auto=format&fit=crop"
+                  alt="UI dialog mock"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=800&auto=format&fit=crop"
+                  alt="Environment paintover"
+                />
+              </div>
+            </div>
 
-      <!-- decorative arcs (very subtle) -->
-      <svg class="about-arcs" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M50 220 Q600 60 1150 220" class="arc"></path>
-        <path d="M120 240 Q600 100 1080 240" class="arc"></path>
-      </svg>
-    </div>
-  </div>
-</section>
+            <article class="work-copy">
+              <h3 class="work-h">Game Environment & UI</h3>
+              <p class="work-p">
+                Level mood + UI components built together for clarity and
+                style—menus, HUD, dialogs, micro-interactions.
+              </p>
+              <ul class="work-tags">
+                <li>HUD</li>
+                <li>Menues</li>
+                <li>Dialog</li>
+                <li>Motion</li>
+              </ul>
+              <a href="#" class="btn btn-cta-outline work-cta"
+                >Play the demo →</a
+              >
+            </article>
+          </div>
 
+          <div class="work-dot" aria-hidden="true"></div>
+        </div>
+
+        <!-- Product Design -->
+        <div class="work-group">
+          <div class="work-swoop" aria-hidden="true">
+            <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
+              <path d="M40 110 Q600 0 1160 110" class="arc"></path>
+              <path d="M80 150 Q600 40 1120 150" class="arc"></path>
+            </svg>
+          </div>
+
+          <div class="container work-grid">
+            <article class="work-copy">
+              <h3 class="work-h">Product Design</h3>
+              <p class="work-p">
+                From wireframes to shipped UI with dev-ready specs—design
+                systems, tokens, responsive flows.
+              </p>
+              <ul class="work-tags">
+                <li>Wireframes</li>
+                <li>Design System</li>
+                <li>Handoff</li>
+              </ul>
+              <a href="#" class="btn btn-cta-outline work-cta"
+                >See product work →</a
+              >
+            </article>
+
+            <div class="work-gallery">
+              <img
+                class="work-hero"
+                src="https://images.unsplash.com/photo-1551281044-8eb3408e3e58?q=80&w=1400&auto=format&fit=crop"
+                alt="Dashboard product UI"
+              />
+              <div class="work-grid-minis">
+                <img
+                  src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop"
+                  alt="Token sheet"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1555421689-43cad7100751?q=80&w=800&auto=format&fit=crop"
+                  alt="Components library"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800&auto=format&fit=crop"
+                  alt="Mobile screen"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="work-dot work-dot--right" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about">
+        <div class="container">
+          <div class="about-wrap">
+            <h2 class="about-title">ABOUT ME</h2>
+
+            <div class="about-grid">
+              <!-- Experience (8 cols) -->
+              <article class="about-card col-8">
+                <h3 class="about-h">Experience</h3>
+                <ul class="about-list">
+                  <li>
+                    <strong>2022 – 2025</strong> Freelance Graphic Design &
+                    Illustration
+                  </li>
+                  <li><strong>2020 – 2022</strong> Interior Design</li>
+                  <li>
+                    <strong>2020 – 2022</strong> Interiors & Graphic Design
+                    Intern
+                    <span class="muted"
+                      >· 3D design & rendering; graphic design; prepress</span
+                    >
+                  </li>
+                </ul>
+              </article>
+
+              <!-- Mascot / photo tile (4 cols) -->
+              <aside class="about-card col-4 about-mascot">
+                <img src="res\logo.svg" alt="" aria-hidden="true" />
+              </aside>
+
+              <!-- Language (4 cols) -->
+              <article class="about-card col-4">
+                <h3 class="about-h">Language</h3>
+                <ul class="about-list">
+                  <li><strong>Czech</strong> native</li>
+                  <li><strong>English</strong> fluent</li>
+                  <li><strong>Vietnamese</strong> basic / learning</li>
+                </ul>
+              </article>
+
+              <!-- Education (8 cols) -->
+              <article class="about-card col-8">
+                <h3 class="about-h">Education</h3>
+                <ul class="about-list">
+                  <li><strong>2025</strong> UX/UI Design (ISTEP)</li>
+                  <li>
+                    <strong>2017 – 2020</strong> University of Jan Evangelista
+                    Purkyně (UJEP) — Product design
+                  </li>
+                  <li>
+                    <strong>2012 – 2016</strong> Secondary school of applied
+                    arts, Uherské Hradiště — Industrial design
+                  </li>
+                </ul>
+              </article>
+
+              <!-- Technical skills (8 cols) -->
+              <article class="about-card col-6 about-card--skills">
+                <h3 class="about-h about-h--accent">Technical skills</h3>
+                <div class="skills">
+                  <div>
+                    <div class="subhead">Software tools</div>
+                    <ul class="tool-badges">
+                      <li title="Photoshop">Ps</li>
+                      <li title="Illustrator">Ai</li>
+                      <li title="Figma">Fig</li>
+                      <li title="After Effects">Ae</li>
+                      <li title="Premiere">Pr</li>
+                      <li title="Blender">Bl</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="subhead">Web development</div>
+                    <ul class="about-bullets">
+                      <li>Basic+ HTML/CSS</li>
+                      <li>CSS</li>
+                      <li>JavaScript (basics)</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Hobbies (4 cols) -->
+              <article class="about-card col-3">
+                <h3 class="about-h">Hobbies</h3>
+                <ul class="about-bullets">
+                  <li>Digital art</li>
+                  <li>Cooking</li>
+                  <li>Singing</li>
+                  <li>PC & board games</li>
+                </ul>
+              </article>
+
+              <!-- Traits (4 cols) -->
+              <article class="about-card col-3">
+                <h3 class="about-h">Traits</h3>
+                <ul class="about-bullets">
+                  <li>Friendly</li>
+                  <li>Team player</li>
+                  <li>Detail-oriented</li>
+                  <li>Creative</li>
+                  <li>Technical</li>
+                </ul>
+              </article>
+            </div>
+
+            <!-- optional tiny links row -->
+            <div class="about-links">
+              <a href="mailto:jan@example.com">MAIL</a>
+              <span>·</span>
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                >LINKEDIN</a
+              >
+            </div>
+
+            <!-- decorative arcs (very subtle) -->
+            <svg
+              class="about-arcs"
+              viewBox="0 0 1200 300"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path d="M50 220 Q600 60 1150 220" class="arc"></path>
+              <path d="M120 240 Q600 100 1080 240" class="arc"></path>
+            </svg>
+          </div>
+        </div>
+      </section>
 
       <!-- CONTACT -->
       <section id="contact" class="section">
@@ -417,127 +521,176 @@
         })
       );
     </script>
-<script>
-(function () {
-  const svg = document.querySelector(".mountains");
-  if (!svg) return;
+    <script>
+      (function () {
+        const svg = document.querySelector(".mountains");
+        if (!svg) return;
 
-  const left = {
-    far:  svg.querySelector(".set--left  .layer--far  polygon"),
-    mid:  svg.querySelector(".set--left  .layer--mid  polygon"),
-    near: svg.querySelector(".set--left  .layer--near polygon"),
-  };
-  const rightGroups = {
-    far:  svg.querySelector(".set--right .layer--far"),
-    mid:  svg.querySelector(".set--right .layer--mid"),
-    near: svg.querySelector(".set--right .layer--near"),
-  };
-  const right = {
-    far:  svg.querySelector(".set--right .layer--far  polygon"),
-    mid:  svg.querySelector(".set--right .layer--mid  polygon"),
-    near: svg.querySelector(".set--right .layer--near polygon"),
-  };
-  const sun = svg.querySelector(".sun circle");
-  const sunEl = document.getElementById('sunFixed');
+        const left = {
+          far: svg.querySelector(".set--left  .layer--far  polygon"),
+          mid: svg.querySelector(".set--left  .layer--mid  polygon"),
+          near: svg.querySelector(".set--left  .layer--near polygon"),
+        };
+        const rightGroups = {
+          far: svg.querySelector(".set--right .layer--far"),
+          mid: svg.querySelector(".set--right .layer--mid"),
+          near: svg.querySelector(".set--right .layer--near"),
+        };
+        const right = {
+          far: svg.querySelector(".set--right .layer--far  polygon"),
+          mid: svg.querySelector(".set--right .layer--mid  polygon"),
+          near: svg.querySelector(".set--right .layer--near polygon"),
+        };
+        const sun = svg.querySelector(".sun circle");
+        const sunEl = document.getElementById("sunFixed");
 
-  function mulberry32(a){return function(){let t=(a+=0x6D2B79F5);t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296;};}
+        function mulberry32(a) {
+          return function () {
+            let t = (a += 0x6d2b79f5);
+            t = Math.imul(t ^ (t >>> 15), t | 1);
+            t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+            return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+          };
+        }
 
-  // FRACTIONAL generator: base & depth are 0..1 of H
-  function genValleyHalfFrac(W2, H, segments, baseFrac, depthFrac, noiseFrac, seed) {
-    const baseY = H * baseFrac;             // smaller y = taller
-    const depth = H * depthFrac;            // how much the center drops
-    const variance = H * noiseFrac;         // jaggedness
-    const rnd = mulberry32(seed);
-    let noisePrev = 0;
-    const pts = [];
-    for (let i = 0; i <= segments; i++) {
-      const t = i / segments;               // 0..1 across half
-      const x = t * W2;
-      const valley = baseY + depth * (1 - Math.cos(Math.PI * t));
-      const step = (rnd() - 0.5) * variance;
-      const noise = noisePrev * 0.7 + step * 0.3;
-      noisePrev = noise;
-      const y = Math.min(H - 2, Math.max(8, valley + noise));
-      pts.push(`${x.toFixed(1)},${y.toFixed(1)}`);
-    }
-    pts.push(`${W2},${H}`, `0,${H}`);       // close to bottom
-    return pts.join(" ");
-  }
+        // FRACTIONAL generator: base & depth are 0..1 of H
+        function genValleyHalfFrac(
+          W2,
+          H,
+          segments,
+          baseFrac,
+          depthFrac,
+          noiseFrac,
+          seed
+        ) {
+          const baseY = H * baseFrac; // smaller y = taller
+          const depth = H * depthFrac; // how much the center drops
+          const variance = H * noiseFrac; // jaggedness
+          const rnd = mulberry32(seed);
+          let noisePrev = 0;
+          const pts = [];
+          for (let i = 0; i <= segments; i++) {
+            const t = i / segments; // 0..1 across half
+            const x = t * W2;
+            const valley = baseY + depth * (1 - Math.cos(Math.PI * t));
+            const step = (rnd() - 0.5) * variance;
+            const noise = noisePrev * 0.7 + step * 0.3;
+            noisePrev = noise;
+            const y = Math.min(H - 2, Math.max(8, valley + noise));
+            pts.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+          }
+          pts.push(`${W2},${H}`, `0,${H}`); // close to bottom
+          return pts.join(" ");
+        }
 
-  function draw() {
-    const vb = svg.viewBox.baseVal;
-    const W  = vb.width  || 1440;
-    const H  = vb.height || 420;
-    const W2 = W / 2;
-    const seg = 18;
+        function draw() {
+          const vb = svg.viewBox.baseVal;
+          const W = vb.width || 1440;
+          const H = vb.height || 420;
+          const W2 = W / 2;
+          const seg = 18;
 
-    // TALLER mountains: tweak base/depth (fractions of H)
-    const far  =  { base:.05, depth:.72, noise:.120, seed:1111 }; // high edges, deep valley
-    const mid  =  { base:.44, depth:.25, noise:.226, seed:2222 };
-    const near =  { base:.62, depth:.34, noise:.252, seed:3333 };
+          // TALLER mountains: tweak base/depth (fractions of H)
+          const far = { base: 0.05, depth: 0.72, noise: 0.12, seed: 1111 }; // high edges, deep valley
+          const mid = { base: 0.44, depth: 0.25, noise: 0.226, seed: 2222 };
+          const near = { base: 0.62, depth: 0.34, noise: 0.252, seed: 3333 };
 
-    left.far.setAttribute("points",  genValleyHalfFrac(W2,H,seg,far.base, far.depth, far.noise, far.seed));
-    left.mid.setAttribute("points",  genValleyHalfFrac(W2,H,seg,mid.base, mid.depth, mid.noise, mid.seed));
-    left.near.setAttribute("points", genValleyHalfFrac(W2,H,seg,near.base,near.depth,near.noise,near.seed));
+          left.far.setAttribute(
+            "points",
+            genValleyHalfFrac(
+              W2,
+              H,
+              seg,
+              far.base,
+              far.depth,
+              far.noise,
+              far.seed
+            )
+          );
+          left.mid.setAttribute(
+            "points",
+            genValleyHalfFrac(
+              W2,
+              H,
+              seg,
+              mid.base,
+              mid.depth,
+              mid.noise,
+              mid.seed
+            )
+          );
+          left.near.setAttribute(
+            "points",
+            genValleyHalfFrac(
+              W2,
+              H,
+              seg,
+              near.base,
+              near.depth,
+              near.noise,
+              near.seed
+            )
+          );
 
-    // mirror right side across the center
-    const mirrorX = `translate(${W},0) scale(-1,1)`;
-    rightGroups.far.setAttribute("transform", mirrorX);
-    rightGroups.mid.setAttribute("transform", mirrorX);
-    rightGroups.near.setAttribute("transform", mirrorX);
-    right.far.setAttribute("points",  left.far.getAttribute("points"));
-    right.mid.setAttribute("points",  left.mid.getAttribute("points"));
-    right.near.setAttribute("points", left.near.getAttribute("points"));
+          // mirror right side across the center
+          const mirrorX = `translate(${W},0) scale(-1,1)`;
+          rightGroups.far.setAttribute("transform", mirrorX);
+          rightGroups.mid.setAttribute("transform", mirrorX);
+          rightGroups.near.setAttribute("transform", mirrorX);
+          right.far.setAttribute("points", left.far.getAttribute("points"));
+          right.mid.setAttribute("points", left.mid.getAttribute("points"));
+          right.near.setAttribute("points", left.near.getAttribute("points"));
 
-// Sun peeking above the mid valley at the center
-const midCenterY = H * (mid.base + mid.depth * (1 - Math.cos(Math.PI * 0.5)));
-const cy = Math.min(H - 40, midCenterY - 16);
-const cx = W / 2;
+          // Sun peeking above the mid valley at the center
+          const midCenterY =
+            H * (mid.base + mid.depth * (1 - Math.cos(Math.PI * 0.5)));
+          const cy = Math.min(H - 40, midCenterY - 16);
+          const cx = W / 2;
 
-// Map viewBox coords -> pixels inside the mountains box
-const scaleX = svg.clientWidth  / (vb.width  || 1440);
-const scaleY = svg.clientHeight / (vb.height || 420);
+          // Map viewBox coords -> pixels inside the mountains box
+          const scaleX = svg.clientWidth / (vb.width || 1440);
+          const scaleY = svg.clientHeight / (vb.height || 420);
 
-// Position the fixed-size sun element (centered via CSS translate(-50%,-50%))
-sunEl.style.left = (cx * scaleX) + 'px';
-sunEl.style.top  = (cy * scaleY) + 'px';
+          // Position the fixed-size sun element (centered via CSS translate(-50%,-50%))
+          sunEl.style.left = cx * scaleX + "px";
+          sunEl.style.top = cy * scaleY + "px";
+        }
 
+        draw();
+        let raf;
+        addEventListener(
+          "resize",
+          () => {
+            cancelAnimationFrame(raf);
+            raf = requestAnimationFrame(draw);
+          },
+          { passive: true }
+        );
+      })();
+    </script>
 
-  }
+    <script>
+      (function () {
+        const root = document.documentElement;
+        const header = document.querySelector(".site-header");
+        if (!header) return;
 
-  draw();
-  let raf;
-  addEventListener("resize", () => {
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(draw);
-  }, { passive: true });
-})();
-</script>
+        function setHeaderVar() {
+          // offsetHeight includes padding + borders
+          root.style.setProperty("--header-h", header.offsetHeight + "px");
+        }
 
-<script>
-  (function () {
-    const root = document.documentElement;
-    const header = document.querySelector('.site-header');
-    if (!header) return;
+        // Observe size changes (logo loads, font swap, responsive nav, etc.)
+        const ro = new ResizeObserver(setHeaderVar);
+        ro.observe(header);
 
-    function setHeaderVar() {
-      // offsetHeight includes padding + borders
-      root.style.setProperty('--header-h', header.offsetHeight + 'px');
-    }
-
-    // Observe size changes (logo loads, font swap, responsive nav, etc.)
-    const ro = new ResizeObserver(setHeaderVar);
-    ro.observe(header);
-
-    // Also set on load and when web fonts finish
-    window.addEventListener('load', setHeaderVar, { once: true });
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(setHeaderVar);
-    }
-    window.addEventListener('resize', setHeaderVar, { passive: true });
-  })();
-</script>
-
-
+        // Also set on load and when web fonts finish
+        window.addEventListener("load", setHeaderVar, { once: true });
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(setHeaderVar);
+        }
+        window.addEventListener("resize", setHeaderVar, { passive: true });
+      })();
+    </script>
   </body>
 </html>
