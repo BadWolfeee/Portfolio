@@ -72,7 +72,7 @@ main {
 .tag-box {
   position: relative;
   width: 18rem;
-  height: 2.5;
+  height: 2.5rem;
   border-radius: 50px;
   background: linear-gradient(to right, #656565, #ecb040, #cea10f);
   background-size: 200%;
