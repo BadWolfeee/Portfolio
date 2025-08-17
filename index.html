@@ -2,44 +2,352 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jan Vlček - Portfolio</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Jan Vlček – Portfolio</title>
+    <meta
+      name="description"
+      content="Jan Vlček – multi-disciplinary designer & illustrator based in Valašské Meziříčí, Czechia."
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <img
-          src="logo.png"
-          alt="Jan Vlček logo image"
-          class="logo"
-          width="47"
-        />
-        <nav>
-          <a href="#">WORK</a>
-          <a href="#">ABOUT</a>
-          <a href="#">CONTACT</a>
+    <!-- Skip to content for a11y -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#hero" aria-label="Homepage">
+          <img src="logo.png" alt="Jan Vlček logo" class="logo" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Toggle menu"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav id="primary-nav" class="nav" aria-label="Primary">
+          <a href="#work">WORK</a>
+          <a href="#about">ABOUT</a>
+          <a href="#contact">CONTACT</a>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <div class="landing-page">
-        <h1>HELLO THERE, <br />I´M JAN VLČEK</h1>
-        <p class="description">
-          multi-disciplinary designer & illustrator based in Valašské Meziříčí,
-          Czechia.
-        </p>
+    <main id="main-content">
+      <!-- HERO -->
+      <section id="hero" class="hero">
+        <div class="container hero-inner">
+          <h1 class="hero-title reveal-down">
+            HELLO THERE,<br />
+            I’M JAN VLČEK
+          </h1>
+          <p class="hero-description reveal-down" style="--delay: 120ms">
+            multi-disciplinary designer & illustrator based in Valašské
+            Meziříčí, Czechia.
+          </p>
+          <div class="hero-actions reveal-down" style="--delay: 220ms">
+            <a href="#contact" class="btn btn-cta-outline"
+              >Let’s create something together →</a
+            >
+          </div>
+        </div>
+        <!-- inside #hero, after your CTA -->
+<button class="scroll-cue" aria-label="Scroll to content"
+  onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">
+  <span>Scroll</span>
+  <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 5v14m0 0l-6-6m6 6l6-6" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
 
-        <div class="buttons">
-          <a href="#" class="btn-get-in-touch"
-            >Lets create something together &gt;</a
-          >
+
+        <!-- Animated scene -->
+  <div class="sun-fixed" id="sunFixed" aria-hidden="true"></div>
+
+        <svg
+  class="mountains"
+  viewBox="0 0 1440 420"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+>
+  <!-- Sun (one, centered) -->
+  <g class="sun"><circle cx="720" cy="360" r="26" /></g>
+
+  <!-- LEFT set -->
+  <g class="set set--left">
+    <g class="layer layer--far"><polygon points="" /></g>
+    <g class="layer layer--mid"><polygon points="" /></g>
+    <g class="layer layer--near"><polygon points="" /></g>
+  </g>
+
+  <!-- RIGHT set (we’ll mirror these via JS) -->
+  <g class="set set--right">
+    <g class="layer layer--far"><polygon points="" /></g>
+    <g class="layer layer--mid"><polygon points="" /></g>
+    <g class="layer layer--near"><polygon points="" /></g>
+  </g>
+</svg>
+
+      </section>
+
+      <!-- WORK -->
+      <section id="work" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Selected work</h2>
+            <p class="section-subtitle">
+              A few highlights across UX, web and illustration.
+            </p>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <img
+                src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1200&auto=format&fit=crop"
+                alt="Fintech onboarding redesign cover"
+                class="card-media"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Fintech Onboarding</h3>
+                <p class="card-text">
+                  7 steps → 3, clearer copy and micro-interactions. +22% signup.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
+                alt="SaaS dashboard system cover"
+                class="card-media"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3 class="card-title">SaaS Design System</h3>
+                <p class="card-text">
+                  Tokenized UI kit, nav re-org, dev pairing. −35% tickets.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop"
+                alt="E-commerce PDP optimization cover"
+                class="card-media"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3 class="card-title">E-com PDP</h3>
+                <p class="card-text">
+                  Sticky CTA, trust signals, better gallery. +11% ATC.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">About</h2>
+            <p class="section-subtitle">
+              I combine research-driven UX with visual craft, from discovery to
+              handoff.
+            </p>
+          </div>
+
+          <ul class="chip-list">
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>Illustration</li>
+            <li>Design Systems</li>
+            <li>Responsive UI</li>
+            <li>Accessibility</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Let’s build something</h2>
+            <p class="section-subtitle">
+              Email me about your project—usually replies within 24h.
+            </p>
+          </div>
+
+          <div class="contact-cta">
+            <a class="btn btn-outline" href="mailto:jan@example.com"
+              >jan@example.com</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Jan Vlček. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
-      <main>
-        <div class="content">
-          <h2></h2>
-        </div>
-      </main>
-    </div>
+    </footer>
+
+    <script>
+      // Current year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu toggle
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("primary-nav");
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        nav.toggleAttribute("data-open");
+      });
+
+      // Close menu when clicking a link (mobile)
+      nav.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          toggle.setAttribute("aria-expanded", "false");
+          nav.removeAttribute("data-open");
+        })
+      );
+    </script>
+<script>
+(function () {
+  const svg = document.querySelector(".mountains");
+  if (!svg) return;
+
+  const left = {
+    far:  svg.querySelector(".set--left  .layer--far  polygon"),
+    mid:  svg.querySelector(".set--left  .layer--mid  polygon"),
+    near: svg.querySelector(".set--left  .layer--near polygon"),
+  };
+  const rightGroups = {
+    far:  svg.querySelector(".set--right .layer--far"),
+    mid:  svg.querySelector(".set--right .layer--mid"),
+    near: svg.querySelector(".set--right .layer--near"),
+  };
+  const right = {
+    far:  svg.querySelector(".set--right .layer--far  polygon"),
+    mid:  svg.querySelector(".set--right .layer--mid  polygon"),
+    near: svg.querySelector(".set--right .layer--near polygon"),
+  };
+  const sun = svg.querySelector(".sun circle");
+  const sunEl = document.getElementById('sunFixed');
+
+  function mulberry32(a){return function(){let t=(a+=0x6D2B79F5);t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296;};}
+
+  // FRACTIONAL generator: base & depth are 0..1 of H
+  function genValleyHalfFrac(W2, H, segments, baseFrac, depthFrac, noiseFrac, seed) {
+    const baseY = H * baseFrac;             // smaller y = taller
+    const depth = H * depthFrac;            // how much the center drops
+    const variance = H * noiseFrac;         // jaggedness
+    const rnd = mulberry32(seed);
+    let noisePrev = 0;
+    const pts = [];
+    for (let i = 0; i <= segments; i++) {
+      const t = i / segments;               // 0..1 across half
+      const x = t * W2;
+      const valley = baseY + depth * (1 - Math.cos(Math.PI * t));
+      const step = (rnd() - 0.5) * variance;
+      const noise = noisePrev * 0.7 + step * 0.3;
+      noisePrev = noise;
+      const y = Math.min(H - 2, Math.max(8, valley + noise));
+      pts.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+    }
+    pts.push(`${W2},${H}`, `0,${H}`);       // close to bottom
+    return pts.join(" ");
+  }
+
+  function draw() {
+    const vb = svg.viewBox.baseVal;
+    const W  = vb.width  || 1440;
+    const H  = vb.height || 420;
+    const W2 = W / 2;
+    const seg = 18;
+
+    // TALLER mountains: tweak base/depth (fractions of H)
+    const far  =  { base:.05, depth:.72, noise:.120, seed:1111 }; // high edges, deep valley
+    const mid  =  { base:.44, depth:.25, noise:.226, seed:2222 };
+    const near =  { base:.62, depth:.34, noise:.252, seed:3333 };
+
+    left.far.setAttribute("points",  genValleyHalfFrac(W2,H,seg,far.base, far.depth, far.noise, far.seed));
+    left.mid.setAttribute("points",  genValleyHalfFrac(W2,H,seg,mid.base, mid.depth, mid.noise, mid.seed));
+    left.near.setAttribute("points", genValleyHalfFrac(W2,H,seg,near.base,near.depth,near.noise,near.seed));
+
+    // mirror right side across the center
+    const mirrorX = `translate(${W},0) scale(-1,1)`;
+    rightGroups.far.setAttribute("transform", mirrorX);
+    rightGroups.mid.setAttribute("transform", mirrorX);
+    rightGroups.near.setAttribute("transform", mirrorX);
+    right.far.setAttribute("points",  left.far.getAttribute("points"));
+    right.mid.setAttribute("points",  left.mid.getAttribute("points"));
+    right.near.setAttribute("points", left.near.getAttribute("points"));
+
+    // Sun peeking above mid valley at the center
+// Map viewBox coords -> pixels inside the mountains box
+const scaleX = svg.clientWidth  / (vb.width  || 1440);
+const scaleY = svg.clientHeight / (vb.height || 420);
+
+// Position the fixed-size sun element so it peeks above the mid valley
+sunEl.style.left = (cx * scaleX) + 'px';
+sunEl.style.top  = (cy * scaleY) + 'px';
+
+  }
+
+  draw();
+  let raf;
+  addEventListener("resize", () => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(draw);
+  }, { passive: true });
+})();
+</script>
+
+<script>
+  (function () {
+    const root = document.documentElement;
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+
+    function setHeaderVar() {
+      // offsetHeight includes padding + borders
+      root.style.setProperty('--header-h', header.offsetHeight + 'px');
+    }
+
+    // Observe size changes (logo loads, font swap, responsive nav, etc.)
+    const ro = new ResizeObserver(setHeaderVar);
+    ro.observe(header);
+
+    // Also set on load and when web fonts finish
+    window.addEventListener('load', setHeaderVar, { once: true });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(setHeaderVar);
+    }
+    window.addEventListener('resize', setHeaderVar, { passive: true });
+  })();
+</script>
+
+
   </body>
 </html>
