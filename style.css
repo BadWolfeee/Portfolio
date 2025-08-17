@@ -231,17 +231,6 @@ img {
   animation-delay: 40ms;
 }
 
-.mountains .sun { display:none; }
-.mountains .sun circle {
-  --sun-size: 42px; /* <- change this to any fixed px size you want */
-  width: var(--sun-size);
-  height: var(--sun-size);
-  fill: var(--accent, #f5891d);
-  filter: drop-shadow(0 0 12px rgba(245,137,29,0.25));
-  transform: translateY(72px) scale(.92); opacity: 0;
-  animation: sun-rise var(--rise-duration,900ms) var(--enter-ease,cubic-bezier(.22,1,.36,1)) forwards;
-  animation-delay: var(--sun-delay,700ms); /* after mountains/text */
-}
 .sun-fixed{
   --sun-size: 52px; /* <- change this to any fixed px size you want */
   width: var(--sun-size);
@@ -257,9 +246,9 @@ img {
 }
 @keyframes rise { to { transform: translateY(0); opacity: 1; } }
 @keyframes sun-rise {
-  0% { transform: translateY(72px) scale(.92); opacity: 0; }
-  60% { opacity: 1; }
-  100% { transform: translateY(0) scale(1); opacity: 1; }
+  0%   { transform: translate(-50%,-50%) translateY(72px) scale(.92); opacity: 0; }
+  60%  { opacity: 1; }
+  100% { transform: translate(-50%,-50%) translateY(0)    scale(1);   opacity: 1; }
 }
 
 /* Respect reduced motion */
@@ -429,6 +418,146 @@ img {
   border-radius: 999px;
   font-size: 0.85rem;
 }
+/* === ABOUT section (light cards on dark page) === */
+.about .about-wrap{
+  position: relative;
+  background: #f3f3f2;        /* light “paper” */
+  color: #222;
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+  padding: clamp(24px, 3.5vw, 36px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+  overflow: hidden;
+}
+
+.about-title{
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  letter-spacing: .06em;
+  color: var(--accent);
+  margin: 4px 0 18px;
+  font-weight: 800;
+}
+
+/* subtle arcs behind the cards */
+.about-arcs{
+  position: absolute; inset: auto 0 100px 0; height: 200px; width: 100%;
+  pointer-events: none; z-index: 0;
+}
+.about-arcs .arc{
+  stroke: rgba(0,0,0,.10); stroke-width: 2; fill: none;
+}
+
+/* grid layout (12 columns on desktop) */
+.about-grid{
+  position: relative; z-index: 1;
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(12, minmax(0,1fr));
+}
+
+/* responsive columns */
+.col-8{ grid-column: span 12; }
+.col-4{ grid-column: span 12; }
+@media (min-width: 900px){
+  .col-8{ grid-column: span 8; }
+  .col-4{ grid-column: span 4; }
+}
+
+/* card style */
+.about-card{
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 14px;
+  padding: clamp(14px, 2.2vw, 18px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+/* headings inside cards */
+.about-h{
+  margin: 0 0 8px;
+  font-size: clamp(1.05rem, 2.5vw, 1.15rem);
+  color: #222;
+}
+.about-h--accent{ color: #d87014; }
+
+/* lists */
+.about-list{
+  margin: 0; padding-left: 0; list-style: none;
+}
+.about-list li{ padding: 6px 0; }
+.about-list .muted{ color:#6b6b6b; display:block; font-size:.92em; }
+
+.about-bullets{
+  margin: 0; padding-left: 18px;
+}
+.about-bullets li{ padding: 3px 0; }
+
+/* mascot tile */
+.about-mascot{
+  display: grid; place-items: center;
+  background: #fef6ef;
+  border-color: #ffd9b0;
+}
+.about-mascot img{
+  width: min(160px, 60%); height: auto; display:block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.15));
+}
+
+/* skills two-column area */
+.skills{
+  display: grid; gap: 12px;
+}
+@media (min-width: 640px){
+  .skills{ grid-template-columns: 1fr 1fr; }
+}
+.subhead{
+  font-weight: 700; margin-bottom: 6px; color:#474747;
+}
+
+/* software badges (use real icons later if you like) */
+.tool-badges{
+  display:flex; flex-wrap:wrap; gap: 8px; list-style:none; padding:0; margin: 0;
+}
+.tool-badges li{
+  width: 36px; height: 36px; border-radius: 8px;
+  display:grid; place-items:center;
+  font-weight: 800; font-size:.9rem; letter-spacing:.02em;
+  color:#111; background:#f4f4f4; border:1px solid #e6e6e6;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+}
+/* quick colors reminiscent of app icons */
+.tool-badges li[title="Photoshop"]{ background:#001e36; color:#31a8ff; }
+.tool-badges li[title="Illustrator"]{ background:#330000; color:#ff9a00; }
+.tool-badges li[title="Figma"]{ background:#111; color:#f24e1e; }
+.tool-badges li[title="After Effects"]{ background:#0b093b; color:#d291ff; }
+.tool-badges li[title="Premiere"]{ background:#0b093b; color:#9993ff; }
+.tool-badges li[title="Blender"]{ background:#1f232b; color:#f5792a; }
+
+/* CTA strip at the bottom (dark bar + orange round button) */
+.about-cta{
+  position: relative; z-index: 1;
+  margin-top: clamp(14px, 3vw, 22px);
+  display: flex; align-items: center; gap: 10px;
+}
+.cta-pill{
+  background:#141414; color:#fff; border:2px solid #2a2a2a;
+  border-radius: 999px; padding:.9rem 1.4rem;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.cta-fab{
+  width:44px; height:44px; border-radius:50%;
+  background: var(--accent); color:#000; border:0; cursor:pointer;
+  display:grid; place-items:center;
+  box-shadow: 0 2px 10px rgba(245,137,29,.35), inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.cta-fab svg{ width:22px; height:22px; }
+
+/* tiny link row */
+.about-links{
+  margin-top: 10px; text-align:center; color:#555; font-size:.85rem;
+}
+.about-links a{ color:#333; text-decoration:none; }
+.about-links a:hover{ color:#000; }
 
 /* --------- Contact --------- */
 .contact-cta {

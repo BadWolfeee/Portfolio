@@ -80,8 +80,6 @@
   preserveAspectRatio="none"
   aria-hidden="true"
 >
-  <!-- Sun (one, centered) -->
-  <g class="sun"><circle cx="720" cy="360" r="26" /></g>
 
   <!-- LEFT set -->
   <g class="set set--left">
@@ -159,27 +157,130 @@
         </div>
       </section>
 
-      <!-- ABOUT -->
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title">About</h2>
-            <p class="section-subtitle">
-              I combine research-driven UX with visual craft, from discovery to
-              handoff.
-            </p>
-          </div>
+<!-- ABOUT -->
+<section id="about" class="section about">
+  <div class="container">
+    <div class="about-wrap">
+      <h2 class="about-title">ABOUT ME</h2>
 
-          <ul class="chip-list">
-            <li>Wireframing</li>
-            <li>Prototyping</li>
-            <li>Illustration</li>
-            <li>Design Systems</li>
-            <li>Responsive UI</li>
-            <li>Accessibility</li>
+      <div class="about-grid">
+        <!-- Experience (8 cols) -->
+        <article class="about-card col-8">
+          <h3 class="about-h">Experience</h3>
+          <ul class="about-list">
+            <li>
+              <strong>2022 – 2025</strong> · Freelance Graphic Design & Illustration
+            </li>
+            <li>
+              <strong>2020 – 2022</strong> · Interior Design
+            </li>
+            <li>
+              <strong>2020 – 2022</strong> · Interiors & Graphic Design Intern
+              <span class="muted">· 3D design & rendering; graphic design; prepress</span>
+            </li>
           </ul>
-        </div>
-      </section>
+        </article>
+
+        <!-- Mascot / photo tile (4 cols) -->
+        <aside class="about-card col-4 about-mascot">
+          <img src="logo.png" alt="" aria-hidden="true" />
+        </aside>
+
+        <!-- Language (4 cols) -->
+        <article class="about-card col-4">
+          <h3 class="about-h">Language</h3>
+          <ul class="about-list">
+            <li><strong>Czech</strong> · native</li>
+            <li><strong>English</strong> · fluent</li>
+            <li><strong>Vietnamese</strong> · basic / learning</li>
+          </ul>
+        </article>
+
+        <!-- Education (8 cols) -->
+        <article class="about-card col-8">
+          <h3 class="about-h">Education</h3>
+          <ul class="about-list">
+            <li><strong>2025</strong> · UX/UI Design (ISTEP)</li>
+            <li><strong>2017 – 2020</strong> · University of Jan Evangelista Purkyně (UJEP) — Product design</li>
+            <li><strong>2012 – 2016</strong> · Secondary school of applied arts, Uherské Hradiště — Industrial design</li>
+          </ul>
+        </article>
+
+        <!-- Technical skills (8 cols) -->
+        <article class="about-card col-8">
+          <h3 class="about-h about-h--accent">Technical skills</h3>
+          <div class="skills">
+            <div>
+              <div class="subhead">Software tools</div>
+              <ul class="tool-badges">
+                <li title="Photoshop">Ps</li>
+                <li title="Illustrator">Ai</li>
+                <li title="Figma">Fig</li>
+                <li title="After Effects">Ae</li>
+                <li title="Premiere">Pr</li>
+                <li title="Blender">Bl</li>
+              </ul>
+            </div>
+            <div>
+              <div class="subhead">Web development</div>
+              <ul class="about-bullets">
+                <li>Basic+ HTML/CSS</li>
+                <li>CSS</li>
+                <li>JavaScript (basics)</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Hobbies (4 cols) -->
+        <article class="about-card col-4">
+          <h3 class="about-h">Hobbies</h3>
+          <ul class="about-bullets">
+            <li>Digital art</li>
+            <li>Cooking</li>
+            <li>Singing</li>
+            <li>PC & board games</li>
+          </ul>
+        </article>
+
+        <!-- Traits (4 cols) -->
+        <article class="about-card col-4">
+          <h3 class="about-h">Traits</h3>
+          <ul class="about-bullets">
+            <li>Friendly</li>
+            <li>Team player</li>
+            <li>Detail-oriented</li>
+            <li>Creative</li>
+            <li>Technical</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- CTA strip -->
+      <div class="about-cta">
+        <a href="#contact" class="btn cta-pill">Lets create something together →</a>
+        <button class="cta-fab" aria-label="Contact"
+          onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <!-- optional tiny links row -->
+      <div class="about-links">
+        <a href="mailto:jan@example.com">MAIL</a>
+        <span>·</span>
+        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LINKEDIN</a>
+      </div>
+
+      <!-- decorative arcs (very subtle) -->
+      <svg class="about-arcs" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M50 220 Q600 60 1150 220" class="arc"></path>
+        <path d="M120 240 Q600 100 1080 240" class="arc"></path>
+      </svg>
+    </div>
+  </div>
+</section>
+
 
       <!-- CONTACT -->
       <section id="contact" class="section">
@@ -304,14 +405,19 @@
     right.mid.setAttribute("points",  left.mid.getAttribute("points"));
     right.near.setAttribute("points", left.near.getAttribute("points"));
 
-    // Sun peeking above mid valley at the center
+// Sun peeking above the mid valley at the center
+const midCenterY = H * (mid.base + mid.depth * (1 - Math.cos(Math.PI * 0.5)));
+const cy = Math.min(H - 40, midCenterY - 16);
+const cx = W / 2;
+
 // Map viewBox coords -> pixels inside the mountains box
 const scaleX = svg.clientWidth  / (vb.width  || 1440);
 const scaleY = svg.clientHeight / (vb.height || 420);
 
-// Position the fixed-size sun element so it peeks above the mid valley
+// Position the fixed-size sun element (centered via CSS translate(-50%,-50%))
 sunEl.style.left = (cx * scaleX) + 'px';
 sunEl.style.top  = (cy * scaleY) + 'px';
+
 
   }
 
