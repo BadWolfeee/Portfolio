@@ -44,20 +44,31 @@
       <!-- HERO -->
       <section id="hero" class="hero">
         <div class="container hero-inner">
-          <h1 class="hero-title reveal-down">
-            HELLO THERE,<br />
-            I’M JAN VLČEK
-          </h1>
-          <p class="hero-description reveal-down" style="--delay: 120ms">
-            multi-disciplinary designer & illustrator based in Valašské
-            Meziříčí, Czechia.
-          </p>
-          <div class="hero-actions reveal-down" style="--delay: 220ms">
-            <a href="#contact" class="btn btn-cta-outline"
-              >Let’s create something together →</a
-            >
-          </div>
-        </div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1 class="hero-title reveal-down">
+        HELLO THERE,<br />I’M JAN VLČEK
+      </h1>
+      <p class="hero-description reveal-down" style="--delay:120ms">
+        multi-disciplinary designer & illustrator based in Valašské Meziříčí, Czechia.
+      </p>
+      <div class="hero-actions reveal-down" style="--delay:220ms">
+        <a href="#contact" class="btn btn-cta-outline">Let’s create something together →</a>
+      </div>
+    </div>
+
+    <!-- NEW: media card with placeholder photo + logo overlay -->
+    <figure class="hero-media reveal-down" style="--delay:140ms">
+      <img
+        class="hero-photo"
+        src="res\concept.svg"
+        alt="Portrait of Jan Vlček"
+      />
+      <!-- overlay logo (uses your logo.png) -->
+      <img class="hero-logo" src="logo.png" alt="" aria-hidden="true" />
+    </figure>
+  </div>
+</div>
         <!-- inside #hero, after your CTA -->
 <button class="scroll-cue" aria-label="Scroll to content"
   onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">
