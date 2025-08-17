@@ -463,6 +463,23 @@ img {
   .col-4{ grid-column: span 4; }
 }
 
+/* default: stack on mobile */
+.col-6, .col-3 { grid-column: span 12; }
+
+/* desktop: 6/3/3 in one row */
+@media (min-width: 900px){
+  .col-6 { grid-column: span 6; }
+  .col-3 { grid-column: span 3; }
+
+  /* in case you previously set .about-card--skills full width, override it */
+  .about-card--skills { grid-column: span 6 !important; }
+}
+
+/* small size tweak so badges fit nicely in half-width */
+.about-card--skills .tool-badges li{
+  width: 32px; height: 32px; font-size: .8rem;
+}
+
 /* card style */
 .about-card{
   background: #ffffff;
