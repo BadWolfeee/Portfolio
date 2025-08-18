@@ -53,7 +53,7 @@ img {
 
 /* --------- Layout helpers --------- */
 .container {
-  width: min(1200px, 100%);
+  width: min(1600px, 100%);
   margin-inline: auto;
   padding-inline: clamp(1rem, 3vw, 2rem);
 }
@@ -85,7 +85,7 @@ img {
 }
 
 .logo {
-  height: 40px; /* replaces inline width attr */
+  height: 40px;
   width: auto;
 }
 
@@ -499,7 +499,7 @@ img {
   stroke-width: 2;
 }
 
-/* side orange dots */
+/* side orange dots 
 .work-dot {
   position: absolute;
   right: -12px;
@@ -514,7 +514,7 @@ img {
 .work-dot--right {
   right: auto;
   left: -12px;
-}
+}*/
 
 /* gallery */
 .work-gallery {
@@ -653,11 +653,9 @@ img {
   transform: translateY(0) translateX(1px);
 }
 
-/* (fixed typo: background-color was misspelled before) */
-
 /* --------- Sections --------- */
 .section {
-  padding-block: clamp(2.5rem, 6vw, 4rem);
+  padding-block: clamp(6rem, 8vw, 10rem);
   border-top: 1px solid #232323;
 }
 
